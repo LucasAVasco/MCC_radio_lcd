@@ -1,0 +1,5 @@
+" Configurando o 'syntastic'
+
+let g:syntastic_c_checkers = ['avr-gcc']
+let g:syntastic_c_include_dirs = ['/usr/lib/avr/include', 'include']
+let g:syntastic_c_mri_args = "-mmcu=atmega328p"
