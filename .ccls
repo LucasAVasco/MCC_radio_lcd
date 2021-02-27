@@ -3,5 +3,4 @@ avr-gcc
 avr
 -I/usr/lib/avr/include
 -Iinclude
-libraries/*.c
 -mmcu=atmega328p
