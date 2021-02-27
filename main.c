@@ -217,6 +217,10 @@ int main()
 
 			else
 			{
+				// Apaga o número anterior
+				move_LCD_cursor(4, 0);
+				draw_LCD_big_number_string("     ");
+
 				// Obtem a coluna onde se deve começar a escrever
 				int x = strlen(freq)*2;
 				x -= strlen(freq) - no_comma_strlen(freq);
