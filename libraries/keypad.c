@@ -44,7 +44,7 @@ char return_keypad_button()
 	for (int testI = 0; testI < 4; testI++)          // Define o valor de J
 	{
 		PORTB = 0b1111^(0b1 << testI);
-		_delay_ms(20);
+		_delay_ms(10);
 
 		char new_PINC = PINC & 0x0F;
 
