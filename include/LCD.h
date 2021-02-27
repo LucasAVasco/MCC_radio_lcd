@@ -33,3 +33,7 @@ void clear_LCD();
 void create_LCD_char(const unsigned char matrix[], unsigned int address);
 void draw_LCD_big_number(unsigned char ch);
 void draw_LCD_big_number_string(char str[]);
+
+
+// Enumeração dos caractéres customizados
+enum LCD_DISPLAY_CUSTOM_CHARS {B_R, T_L, T_R, T_B, T_B_R, T_B_L, T, R};

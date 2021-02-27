@@ -4,9 +4,6 @@
 
 
 
-// Enumeração dos caractéres customizados
-enum LCD_DISPLAY_CUSTOM_CHARS {B_R, T_L, T_R, T_B, T_B_R, T_B_L, T, R};
-
 // Variáveis do display LCD
 unsigned int cursor_line, cursor_column;
 

@@ -29,9 +29,6 @@
 
 
 
-// Enumeração dos caractéres customizados
-extern enum LCD_DISPLAY_CUSTOM_CHARS {B_R, T_L, T_R, T_B, T_B_R, T_B_L, T, R};
-
 // Variáveis da radio
 char freq[6] = "";
 
