@@ -184,13 +184,13 @@ int main()
 			if (button == '.' && (strlen(freq) == 0 || strstr(freq, ".")))
 				_delay_ms(10);
 
-			// Números de 1 a 9
-			else if (button >= '0' && button <= '9')
-				freq[strlen(freq)] = button;
-
-			// Vírgula
-			else if (button == '.')
-				freq[strlen(freq)] = button;
+			// Números de 1 a 9 ou vírgula
+			else if ((button >= '0' && button <= '9') || button == '.')
+			{
+				int freq_len = strlen(freq);
+				freq[freq_len] = button;
+				freq[freq_len + 1] = '\0';
+			}
 
 			// Soma "1.0" à frequência
 			else if (button == '+')
@@ -287,7 +287,7 @@ void clear_freq()
 	update_led();
 
 	// Limpa a variável "freq"
-	strcpy(freq, "");
+	freq[0] = '\0';
 
 	// Escreve o "0"
 	move_LCD_cursor(11,0);
