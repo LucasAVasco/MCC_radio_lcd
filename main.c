@@ -270,9 +270,31 @@ int main()
 // Soma um valor à frequência
 void sum_freq(float value)
 {
-	char freq_tmp[20] = "";
-	sprintf(freq_tmp, "%f", atof(freq) + value);
-	strncpy(freq, freq_tmp, strlen(freq));
+	// Caso a string "freq" esteja vazia
+	if (freq[0] == '\0')
+	{
+		freq[0] = '0';
+		freq[1] = '\0';
+	}
+
+	// Novo valor da frequência
+	float new_freq = atof(freq) + value;
+
+	// Caso o número seja negativo
+	if (new_freq < 0)
+		new_freq = 0.0001;
+
+
+	// Calcula o número de algorismos depois da vírgula (incluindo ela)
+	int float_len = strlen(strchr(freq, '.'));
+
+	// Escreve o novo valor na variável "freq"
+	snprintf(freq, 6, "%f", new_freq);
+
+	// Remove os algorítimos depois da vírgula desnecessários
+	for (int tmp0 = 0; tmp0 < 5; tmp0++)
+		if (freq[tmp0] == '.')
+			freq[tmp0 + float_len] = '\0';
 }
 
 
