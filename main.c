@@ -184,7 +184,7 @@ int main()
 			if (button == '.' && (strlen(freq) == 0 || strstr(freq, ".")))
 				_delay_ms(10);
 
-			// Números de 1 a 9 ou vírgula
+			// Números de 0 a 9 ou vírgula
 			else if ((button >= '0' && button <= '9') || button == '.')
 			{
 				int freq_len = strlen(freq);
