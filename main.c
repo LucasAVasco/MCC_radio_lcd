@@ -238,10 +238,22 @@ int main()
 			// Apresenta a rádio na tela
 			#define CMP_FREQ(VALUE) if (strcmp(freq, VALUE) == 0)
 
-			CMP_FREQ("980")
+			CMP_FREQ("96.1")
 			{
 				move_LCD_cursor(0, 0);
-				write_LCD_string("Radio1");
+				write_LCD_string("BAND ");
+				set_led(true);
+			}
+			else CMP_FREQ("105.1")
+			{
+				move_LCD_cursor(0, 0);
+				write_LCD_string("X FM ");
+				set_led(true);
+			}
+			else CMP_FREQ("100.1")
+			{
+				move_LCD_cursor(0, 0);
+				write_LCD_string("UDESC");
 				set_led(true);
 			}
 
