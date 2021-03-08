@@ -330,9 +330,9 @@ void clear_freq()
 	move_LCD_cursor(11,0);
 	draw_LCD_big_number('0');
 
-	// Escreve o "Hz"
-	move_LCD_cursor(14,1);
-	write_LCD_string("Hz");
+	// Escreve o "MHz"
+	move_LCD_cursor(13,1);
+	write_LCD_string("MHz");
 
 	// Escreve o NONE
 	move_LCD_cursor(0, 0);
