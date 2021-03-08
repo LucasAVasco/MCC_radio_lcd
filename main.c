@@ -194,11 +194,11 @@ int main()
 
 			// Soma "1.0" à frequência
 			else if (button == '+')
-				sum_freq(1.0);
+				sum_freq(1.00001);
 
 			// Subtrai "1.0" da frequência
 			else if (button == '-')
-				sum_freq(-1.0);
+				sum_freq(-0.99999);
 
 
 			// Determina o tamanho máximo da frequência
